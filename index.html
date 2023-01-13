@@ -11,11 +11,41 @@
   <link rel="stylesheet" href="css/bootstrap-icons.css" type="text/css">
   <link rel="stylesheet" href="css/font.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <!-- <link rel="stylesheet" href="css/animation.css" type="text/css"> -->
+  <link rel="stylesheet" href="css/animation.css" type="text/css">
 </head>
 
 <body>
   <div class="main-wrapper d-flex">
+    <div class="animation">
+			<span class="circle one"></span>
+			<span class="circle two"></span>
+			<span class="circle three"></span>
+			<span class="circle four"></span>
+			<span class="line-1 ">
+				<svg width="1920" height="450" viewBox="0 0 1920 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.3" d="M0 155L95.4613 293.923C106.459 309.928 131.116 305.943 136.512 287.289L209.86 33.7127C215.892 12.8576 244.803 11.2033 253.175 31.2341L344.838 250.546C352.224 268.217 376.708 269.648 386.102 252.958L519.839 15.3693C529.061 -1.01332 552.975 -0.0134089 560.797 17.0818L716.503 357.389C724.454 374.766 748.899 375.43 757.782 358.51L902.518 82.8223C911.524 65.6685 936.406 66.653 944.028 84.4648L1093.06 432.731C1101.14 451.601 1128.01 451.247 1135.58 432.172L1291.33 39.9854C1298.27 22.5135 1322.1 20.2931 1332.14 36.1824L1473.74 260.126C1482.47 273.922 1502.38 274.494 1511.88 261.221L1667.88 43.3025C1678.17 28.9257 1700.16 31.0533 1707.5 47.1365L1844.91 348.06C1853.69 367.287 1881.58 365.486 1887.81 345.29L1970 79" stroke="url(#paint0_linear_332_3757)" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round"></path>
+					<defs>
+					<linearGradient id="paint0_linear_332_3757" x1="1946.24" y1="352.062" x2="-1.52124" y2="345.607" gradientUnits="userSpaceOnUse">
+					<stop offset="0" stop-color="#6E4AFF"></stop>
+					<stop offset="0.479167" stop-color="#E43BFF"></stop>
+					<stop offset="1" stop-color="#6E4AFF"></stop>
+					</linearGradient>
+					</defs>
+				</svg>
+			</span>
+			<span class="line-2">
+				<svg width="1920" height="459" viewBox="0 0 1920 459" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 89L103.191 296.201C112.034 313.958 137.703 312.941 145.114 294.54L224.847 96.5574C232.264 78.141 257.962 77.1423 266.786 94.9275L352.649 267.995C360.863 284.553 384.264 285.148 393.31 269.03L516.226 50.0159C525.164 34.0902 548.205 34.4325 556.666 50.6167L713.497 350.608C721.71 366.318 743.86 367.222 753.326 352.234L901.462 117.684C911.188 102.286 934.102 103.763 941.771 120.282L1091.14 442.062C1099.38 459.816 1124.62 459.817 1132.86 442.064L1303.17 75.2544C1310.64 59.1685 1332.73 57.2308 1342.89 71.7713L1469.94 253.703C1479.15 266.893 1498.71 266.794 1507.78 253.511L1671.82 13.4627C1681.74 -1.05968 1703.63 0.478486 1711.42 16.2459L1844.42 285.267C1853.64 303.905 1880.89 301.723 1887.02 281.857L1970 13" stroke="url(#paint0_linear_332_3758)" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round"></path>
+					<defs>
+					<linearGradient id="paint0_linear_332_3758" x1="1946.24" y1="286.062" x2="-1.52105" y2="279.607" gradientUnits="userSpaceOnUse">
+					<stop offset="0" stop-color="#6E4AFF"></stop>
+					<stop offset="0.479167" stop-color="#E43BFF"></stop>
+					<stop offset="1" stop-color="#6E4AFF"></stop>
+					</linearGradient>
+					</defs>
+				</svg>	
+			</span>
+		</div>
     <div class="nav-header">
       <div class="logo">
         <svg class="logo-abbr" width="43" height="34" viewBox="0 0 43 34" fill="none"
@@ -51,7 +81,7 @@
             <span>Dashboard</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
-          <ul class="sub-dropdown-menu">
+          <ul class="sub-dropdown-menu list-menu__items">
             <li><a href="#"><span>Dashboard Light</span></a></li>
             <li><a href="#"><span>Balance Page</span></a></li>
             <li><a href="#"><span>Card Center</span></a></li>
@@ -60,7 +90,7 @@
             <li><a href="#"><span>Transaction History</span></a></li>
           </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,11 +108,19 @@
                 </path>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>Apps</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,11 +133,19 @@
                 </g>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>Charts</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,11 +160,19 @@
                 </path>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>bootstrap</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,11 +185,19 @@
                 </g>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>plugins</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,11 +209,19 @@
                 </path>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>Widget</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,11 +234,19 @@
                 </g>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>Forms</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
+        <li class="sub-dropdown">
           <a href="#">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,12 +259,20 @@
                 </g>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>Table</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
-        <li>
-          <a href="#">
+        <li class="list-menu">
+          <a href="#" class="list-menu__title active active-on">
             <span class="main-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.4"
@@ -200,15 +286,23 @@
                 </path>
               </svg>
             </span>
-            <span>Dashboard</span>
+            <span>pages</span>
             <span class="ms-auto"><i class="bi bi-caret-right-fill"></i></span>
           </a>
+          <ul class="sub-dropdown-menu list-menu__items list-menu__items">
+            <li><a href="#"><span>Dashboard Light</span></a></li>
+            <li><a href="#"><span>Balance Page</span></a></li>
+            <li><a href="#"><span>Card Center</span></a></li>
+            <li><a href="#"><span>Invoices</span></a></li>
+            <li><a href="#"><span>Transaction Details</span></a></li>
+            <li><a href="#"><span>Transaction History</span></a></li>
+          </ul>
         </li>
       </ul>
-      <div class="copyright">
+      <!-- <div class="copyright">
         <p class="fs-14"><strong>doLab Personal Banking Admin</strong> © 2022 All Rights Reserved</p>
         <p class="fs-14">Made with <span><i class="bi bi-suit-heart-fill"></i></span> by DexignZone</p>
-      </div>
+      </div> -->
     </div>
     <div class="main-body">
       <header>
@@ -246,15 +340,64 @@
                     </svg>
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <a class="dropdown-item" href="#">
+                      <img src="img/1.jpg" alt="" class="media">
+                      <div class="dropdown-menu-text">
+                        <P> Dr sultads Send you Photo</P>
+                        <span>29 July 2020 - 02:26 PM</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    <span class="media media-info">kg</span>
+                    <div class="dropdown-menu-text">
+                      <P>Resport created successfully</P>
+                      <span>29 July 2020 - 02:26 PM</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                  <span class="media media-icon"><i class="bi bi-house-check"></i></span>
+                  <div class="dropdown-menu-text">
+                    <P>Reminder : Treatment Time!</P>
+                    <span>29 July 2020 - 02:26 PM</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                <img src="img/1.jpg" alt="" class="media">
+                <div class="dropdown-menu-text">
+                  <P> Dr sultads Send you Photo</P>
+                  <span>29 July 2020 - 02:26 PM</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+              <span class="media media-info-2">kg</span>
+              <div class="dropdown-menu-text">
+                <P>Resport created successfully</P>
+                <span>29 July 2020 - 02:26 PM</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+            <span class="media media-icon media-icon-2"><i class="bi bi-house-check"></i></span>
+            <div class="dropdown-menu-text">
+              <P>Reminder : Treatment Time!</P>
+              <span>29 July 2020 - 02:26 PM</span>
+            </div>
+          </a>
+        </li>
+
                   </ul>
-                <li class="nav-item dropdown">
-                  <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item">
+                  <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
                         d="M7.00001 2.33331H21C21.6443 2.33331 22.1667 2.85565 22.1667 3.49998V15.1666C22.1667 15.811 21.6443 16.3333 21 16.3333H7.00001C6.35568 16.3333 5.83334 15.811 5.83334 15.1666V3.49998C5.83334 2.85565 6.35568 2.33331 7.00001 2.33331ZM16.1 4.66665C15.3489 4.66665 14.4705 5.51814 14 6.06665C13.5295 5.51814 12.6511 4.66665 11.9 4.66665C10.5705 4.66665 9.80001 5.70366 9.80001 7.0235C9.80001 8.4856 11.2 10.0333 14 11.6666C16.8 10.0333 18.2 8.51665 18.2 7.11665C18.2 5.79681 17.4295 4.66665 16.1 4.66665Z">
@@ -264,14 +407,6 @@
                       </path>
                     </svg>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
                 <li class="nav-item dropdown">
                   <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,8 +459,23 @@
 
 
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <nav class="nav">
+      <a class="nav-link" href="#">
+        NOTES</a>
+      <a class="nav-link" href="#">ALERTS</a>
+      <a class="nav-link active" aria-current="page" href="#">CHAT</a>
+    </nav>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
 
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

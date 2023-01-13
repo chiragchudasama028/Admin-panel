@@ -15,6 +15,8 @@
     --nav-headbg: rgba(118, 62, 208, 1);
     --sidebar-bg: linear-gradient(180deg, rgba(118, 62, 208, 1) 0%, rgba(46, 27, 160, 1) 155.56%);
     --headerbg: transparent;
+    --bs-body-bg: #311898;
+    --shadow: 0px 4px 6px rgb(62 73 84 / 4%);
 }
 ul , ol{
     padding: 0;
@@ -30,7 +32,7 @@ a{
     display: inline-block;
     text-decoration: none;
 }
-svg{
+.nav-header svg , .main-body svg{
     fill: rgba(255, 255, 255, 0.7);
 }
 @keyframes icon-bounce {
@@ -50,8 +52,17 @@ svg{
 }
 
 body{
-    background-color: #000;
+    background-color: var(--bs-body-bg);
     font-family: var(--font-family-base);
+}
+.animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 .nav-header{
     width: 260px;
@@ -99,7 +110,7 @@ body{
     width: 100%;
 }
 .navbar{
-    background: var(--linear);
+    background:transparent;
 }
 .hamburger{
     margin-right:15PX;
@@ -112,7 +123,23 @@ body{
     font-weight: 600;
     color: var(--bs-white);   
 }
-.nav-link{
+.form-control{
+    background: var(--bs-card-bg);
+    box-shadow: var(--shadow);
+    border: none;
+    outline: none;
+    color: var(--bs-white);
+}
+.form-control:focus{
+    background: var(--bs-card-bg);
+    box-shadow: var(--shadow);
+    border: none;
+    outline: none;
+}
+.navbar .form-control::placeholder{
+    color: var(--bs-white);
+}
+.main-wrapper .nav-link{
     color: rgba(255, 255, 255, 0.1);
     border-radius: 0.938rem;
     padding: 0rem;
@@ -153,6 +180,114 @@ body{
 .nav-item:hover svg{
     animation: icon-bounce 0.8s cubic-bezier(0.57, -0.72, 1, 0.76) both 1;   
 }
-.sub-dropdown-menu{
-    padding-left: 30px;
+.nav-item{
+    position: relative;
 }
+.nav-item::after{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-white);
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+.dropdown-menu{
+    --bs-dropdown-border-radius:10px;
+    position: absolute;
+    right: 0;
+    z-index: var(--bs-dropdown-zindex);
+    display: none;
+    /* min-width: var(--bs-dropdown-min-width); */
+    padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+    margin: 0;
+    font-size: var(--bs-dropdown-font-size);
+    color: var(--bs-dropdown-color);
+    text-align: left;
+    list-style: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+    border-radius: var(--bs-dropdown-border-radius);
+}
+.dropdown-menu[data-bs-popper] {
+    left: -270px;
+}
+.dropdown-item{
+    color: var(--bs-white);
+    display: flex;
+    padding: 12px 10px;
+    border-bottom: 0.5px solid var(--bs-body-color);
+}
+.dropdown-item:focus, .dropdown-item:hover{
+}
+/* .dropdown-item img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+} */
+.dropdown-item p{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.dropdown-item span{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.media{
+width: 3.125rem;
+height: 3.125rem;
+background: #eee;
+border-radius: 0.75rem;
+overflow: hidden;
+font-size: 1.25rem;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+align-self: start;
+background: rgba(0, 175, 239, 0.15);
+color: #00afef;
+margin-right: 15px;
+}
+.media-info{
+    background: rgba(0, 175, 239, 0.15);
+    color: #00afef;
+}
+.media-info-2{
+    background: rgba(247, 43, 80, 0.15);
+    color: #f72b50;
+}
+.dropdown-item .media{
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.media-icon i{
+    font-size: 30px;
+    color: #1EAE7A;
+}
+.media-icon-2 i{
+    font-size: 30px;
+    color: var(--primary);
+}
+/* .sub-dropdown{
+    transition: all 1s ease;
+
+}
+.sub-dropdown .sub-dropdown-menu{
+    display: none;
+    transition: all 1s ease;
+}
+.sub-dropdown:hover .sub-dropdown-menu{
+    display: block;
+    transition: all 1s ease;
+
+}
+body{
+    transition: all 1s ease;
+} */
