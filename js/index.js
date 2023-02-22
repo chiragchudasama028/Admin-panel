@@ -3,5 +3,5 @@ $(document).ready(function() {
         $(this).toggleClass('active-on');
         $(this).next('.list-menu__items').slideToggle();
     });
-  });
+});
   
